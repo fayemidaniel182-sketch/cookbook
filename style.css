@@ -1,1 +1,183 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
+body{
+    font-family:Arial, sans-serif;
+    background:#f8f9fa;
+}
+
+header{
+    background:#40916C;
+    color:white;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+#hamburger{
+    border:none;
+    background:none;
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+}
+
+#nav{
+    display:none;
+}
+
+#nav.open{
+    display:flex;
+    gap:15px;
+}
+
+#nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.controls{
+    display:flex;
+    gap:10px;
+    padding:20px;
+    flex-wrap:wrap;
+}
+
+.controls input,
+.controls select{
+    padding:10px;
+}
+
+#openFormBtn{
+    padding:10px 15px;
+    background:#40916C;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+#recipeGrid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.card-header{
+    font-size:3rem;
+    text-align:center;
+    padding:20px;
+}
+
+.card-body{
+    padding:15px;
+}
+
+.card-title{
+    margin-bottom:10px;
+}
+
+.card-badge{
+    background:#40916C;
+    color:white;
+    padding:4px 8px;
+    border-radius:20px;
+    font-size:.8rem;
+}
+
+.card-actions{
+    display:flex;
+    gap:10px;
+    padding:15px;
+    flex-wrap:wrap;
+}
+
+.btn-icon{
+    padding:8px 12px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.btn-delete{
+    background:#dc3545;
+    color:white;
+}
+
+.btn-shopping{
+    background:#0d6efd;
+    color:white;
+}
+
+.btn-favorite{
+    background:#ffc107;
+}
+
+#modalOverlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+#modalOverlay.open{
+    display:flex;
+}
+
+.modal{
+    background:white;
+    width:90%;
+    max-width:500px;
+    padding:20px;
+    border-radius:10px;
+}
+
+.modal input,
+.modal textarea,
+.modal select{
+    width:100%;
+    margin-bottom:10px;
+    padding:10px;
+}
+
+#saveRecipeBtn{
+    width:100%;
+    padding:12px;
+    background:#40916C;
+    color:white;
+    border:none;
+}
+
+#shoppingPanel{
+    position:fixed;
+    right:-350px;
+    top:0;
+    width:350px;
+    height:100%;
+    background:white;
+    padding:20px;
+    box-shadow:-5px 0 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+#shoppingPanel.open{
+    right:0;
+}
+
+.shopping-item{
+    padding:10px 0;
+    border-bottom:1px solid #ddd;
+}
