@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <h1>🍽 Recipe Book</h1>
+
+        <button id="hamburger">☰</button>
+
+        <nav id="nav">
+            <a href="#">Home</a>
+            <a href="#">Recipes</a>
+            <a href="#">Favorites</a>
+        </nav>
+    </header>
+
+    <section class="controls">
+        <input type="text" id="searchInput" placeholder="Search recipes...">
+
+        <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="dinner">Dinner</option>
+            <option value="dessert">Dessert</option>
+            <option value="snack">Snack</option>
+        </select>
+
+        <button id="openFormBtn">+ Add Recipe</button>
+    </section>
+
+    <main>
+        <div id="recipeGrid"></div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modalOverlay">
+        <div class="modal">
+            <button id="modalClose">✖</button>
+
+            <h2>Add Recipe</h2>
+
+            <input type="text" id="recipeName" placeholder="Recipe Name">
+
+            <select id="recipeCategory">
+                <option value="breakfast">Breakfast</option>
+                <option value="dinner">Dinner</option>
+                <option value="dessert">Dessert</option>
+                <option value="snack">Snack</option>
+            </select>
+
+            <input type="text" id="recipeCuisine" placeholder="Cuisine">
+
+            <input type="text" id="recipeEmoji" placeholder="Emoji 🍽">
+
+            <textarea id="recipeIngredients"
+                placeholder="One ingredient per line"></textarea>
+
+            <textarea id="recipeInstructions"
+                placeholder="Instructions"></textarea>
+
+            <button id="saveRecipeBtn">Save Recipe</button>
+        </div>
+    </div>
+
+    <!-- Shopping Panel -->
+    <div id="shoppingPanel">
+        <button id="closeShoppingPanel">Close</button>
+        <h2>Shopping List</h2>
+        <div id="shoppingItems"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
