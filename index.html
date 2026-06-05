@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,80 +9,111 @@
 </head>
 <body>
 
-    <header>
-       <section class="hero">
+<header>
+    <div class="logo">
+        🍽 Recipe Book
+    </div>
+
+    <button id="hamburger">☰</button>
+
+    <nav id="nav">
+        <a href="#">Home</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#favorites">Favorites</a>
+    </nav>
+</header>
+
+<section class="hero">
     <div class="hero-content">
         <h1>Discover Amazing Recipes</h1>
-        <p>Browse delicious recipes from around the world.</p>
+        <p>Browse delicious meals from around the world.</p>
         <button id="openFormBtn">Add New Recipe</button>
     </div>
 </section>
-        <h1>🍽 Recipe Book</h1>
 
-        <button id="hamburger">☰</button>
+<section class="controls">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search recipes..."
+    >
 
-        <nav id="nav">
-            <a href="#">Home</a>
-            <a href="#">Recipes</a>
-            <a href="#">Favorites</a>
-        </nav>
-    </header>
+    <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+        <option value="dessert">Dessert</option>
+        <option value="snack">Snack</option>
+    </select>
+</section>
 
-    <section class="controls">
-        <input type="text" id="searchInput" placeholder="Search recipes...">
+<main id="recipes">
+    <div id="recipeGrid"></div>
+</main>
 
-        <select id="categoryFilter">
-            <option value="all">All Categories</option>
+<!-- ADD RECIPE MODAL -->
+<div id="modalOverlay">
+
+    <div class="modal">
+
+        <button id="modalClose">✖</button>
+
+        <h2>Add Recipe</h2>
+
+        <input
+            type="text"
+            id="recipeName"
+            placeholder="Recipe Name"
+        >
+
+        <select id="recipeCategory">
             <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
             <option value="dinner">Dinner</option>
             <option value="dessert">Dessert</option>
             <option value="snack">Snack</option>
         </select>
 
-        <button id="openFormBtn">+ Add Recipe</button>
-    </section>
+        <input
+            type="text"
+            id="recipeCuisine"
+            placeholder="Cuisine"
+        >
 
-    <main>
-        <div id="recipeGrid"></div>
-    </main>
+        <textarea
+            id="recipeIngredients"
+            placeholder="One ingredient per line"
+        ></textarea>
 
-    <!-- Modal -->
-    <div id="modalOverlay">
-        <div class="modal">
-            <button id="modalClose">✖</button>
+        <textarea
+            id="recipeInstructions"
+            placeholder="Instructions"
+        ></textarea>
 
-            <h2>Add Recipe</h2>
+        <button id="saveRecipeBtn">
+            Save Recipe
+        </button>
 
-            <input type="text" id="recipeName" placeholder="Recipe Name">
-
-            <select id="recipeCategory">
-                <option value="breakfast">Breakfast</option>
-                <option value="dinner">Dinner</option>
-                <option value="dessert">Dessert</option>
-                <option value="snack">Snack</option>
-            </select>
-
-            <input type="text" id="recipeCuisine" placeholder="Cuisine">
-
-            <input type="text" id="recipeEmoji" placeholder="Emoji 🍽">
-
-            <textarea id="recipeIngredients"
-                placeholder="One ingredient per line"></textarea>
-
-            <textarea id="recipeInstructions"
-                placeholder="Instructions"></textarea>
-
-            <button id="saveRecipeBtn">Save Recipe</button>
-        </div>
     </div>
 
-    <!-- Shopping Panel -->
-    <div id="shoppingPanel">
-        <button id="closeShoppingPanel">Close</button>
-        <h2>Shopping List</h2>
-        <div id="shoppingItems"></div>
-    </div>
+</div>
 
-    <script src="script.js"></script>
+<!-- SHOPPING LIST PANEL -->
+<div id="shoppingPanel">
+
+    <button id="closeShoppingPanel">
+        Close
+    </button>
+
+    <h2>Shopping List</h2>
+
+    <div id="shoppingItems"></div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
+```
